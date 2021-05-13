@@ -1,0 +1,171 @@
+// nav
+nav {
+  padding-top: 20px;
+  @include container();
+  @include flex(row, space-between, center);
+  position: relative;
+  @media (max-width: $--tablet-width) {
+    background: $--clr-orange;
+    width: 100%;
+    padding: 0 5%;
+  }
+  .hamburger {
+    display: none;
+    @media (max-width: $--mobile-width) {
+      display: block;
+      color: $--clr-white;
+      font-size: 30px;
+    }
+  }
+  .logo {
+    @media (max-width: $--mobile-width) {
+      img {
+        height: 70px;
+        margin: 10px;
+      }
+    }
+  }
+  .nav-links {
+    @include flex(row, space-between, center);
+    @media (max-width: $--tablet-width) {
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+    @media (max-width: $--mobile-width) {
+      @include flex(column, flex-start, flex-start);
+      position: absolute;
+      background: $--clr-orange;
+      z-index: 11;
+      top: 0;
+      right: 0;
+      width: 90%;
+      padding-top: 20px;
+      padding-left: 30px;
+      padding-bottom: 30px;
+      min-height: 100vh;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .close {
+      display: none;
+      @media (max-width: $--mobile-width) {
+        display: block;
+        position: relative;
+        left: 40%;
+        top: -2%;
+        font-size: 30px;
+        color: $--clr-white;
+      }
+    }
+    li {
+      padding: 30px 20px;
+      @media (max-width: $--tablet-width) {
+        padding: 30px 5px;
+      }
+      @media (max-width: $--mobile-width) {
+        padding: 2px 0;
+      }
+      a {
+        font-size: 15px;
+        color: $--clr-white;
+      }
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.473);
+        a {
+          color: $--clr-orange;
+        }
+      }
+      &.active {
+        background-color: $--clr-white;
+        @media (max-width: $--mobile-width) {
+          background-color: transparent;
+        }
+        a {
+          color: $--clr-orange;
+          @media (max-width: $--mobile-width) {
+            color: $--clr-white;
+          }
+        }
+      }
+      .dropdown--items {
+        @include container();
+        position: absolute;
+        top: 95px;
+        left: 50%;
+        transform: translate(-50%);
+        @include flex(row, space-between, center);
+        background-color: $--clr-white;
+        padding: 20px;
+        visibility: hidden;
+        @media (max-width: $--tablet-width) {
+          @include flex(row, space-between, flex-start);
+          width: 100%;
+          top: 75px;
+          padding: 0 5%;
+        }
+        @media (max-width: $--mobile-width) {
+          position: relative;
+          background: $--clr-orange;
+          width: 100%;
+          top: 0;
+          visibility: visible;
+          @include flex(column, space-between, flex-start);
+          display: none;
+        }
+        div {
+          @include flex(column, space-between, flex-start);
+          flex: 0 0 30%;
+          max-width: 30%;
+          @media (max-width: $--mobile-width) {
+            max-width: 100%;
+            flex: 0 0 100%;
+          }
+          P {
+            font-size: 20px;
+            color: #737c85;
+            margin: 10px 0;
+            @media (max-width: $--mobile-width) {
+              font-size: 14px;
+              color: $--clr-white;
+              margin: 5px;
+            }
+          }
+          hr {
+            width: 100%;
+            border-color: $--clr-orange;
+            @media (max-width: $--mobile-width) {
+              display: none;
+            }
+          }
+        }
+        a {
+          line-height: 2;
+          font-size: 14px;
+          color: #737c85;
+          @media (max-width: $--mobile-width) {
+            line-height: 1.5;
+            color: $--clr-white;
+            margin-left: 15px;
+          }
+          &:first-of-type {
+            margin-top: 10px;
+            @media (max-width: $--mobile-width) {
+              margin-top: 0;
+            }
+          }
+          &:hover {
+            color: rgba($--clr-white, 0.5);
+          }
+        }
+        &.active {
+          visibility: visible;
+          @media (max-width: $--mobile-width) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

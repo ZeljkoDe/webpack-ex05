@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 52px;
+  @media (max-width: $--tablet-width) {
+    font-size: 38px;
+  }
+  @media (max-width: $--mobile-width) {
+    font-size: 28px;
+  }
+}
+h2 {
+  font-size: 30px; //resources page + naslov 40px
+  color: $--clr-orange;
+  font-family: "Lato-Light";
+  text-align: center;
+  @media (max-width: $--mobile-width) {
+    font-size: 28px;
+  }
+}
+h3 {
+  font-size: 24px; //home page
+}
+h4 {
+  font-size: 20px;
+}
+p {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.lead {
+  font-size: 20px; //paragraf veci
+  line-height: 1.8;
+}
+// footer 12px

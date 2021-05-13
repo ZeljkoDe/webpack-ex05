@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example-05</title>
+  </head>
+  <body>
+    <header class="comm-header">
+      <nav>
+        <a class="logo" href="index.html"
+          ><img src="./images/logo.png" alt="logo img"
+        /></a>
+        <ul class="nav-links">
+          <li class="close">x</li>
+          <li><a href="commercial.html">Commercila</a></li>
+          <li><a href="#">Industrial</a></li>
+          <li class="dropdown">
+            <a href="#">Infrastructure</a>
+            <div class="dropdown--items">
+              <div>
+                <p>Proin tristique</p>
+                <hr />
+                <a href="#">Lorem Ipsum</a>
+                <a href="#">Lorem Ipsum</a>
+                <a href="#">Lorem Ipsumd sd</a>
+                <a href="#">Lorem Ipsum cvse </a>
+                <a href="#">Lorem Ipsum dsldkjs</a>
+                <a href="#">Lorem Ipsumdfgsd</a>
+              </div>
+              <div>
+                <p>Duis hendreri mauris</p>
+                <hr />
+                <a href="#">Lorem Ipsum</a>
+                <a href="#">Lorem Ipsum</a>
+                <a href="#">Lorem Ipsumd sd</a>
+                <a href="#">Lorem Ipsum cvse Lorem Ipsum cvse</a>
+                <a href="#">Lorem Ipsum dsldkjs Lorem Ipsum cvse</a>
+                <a href="#">Lorem Ipsumdfgsd</a>
+              </div>
+              <div>
+                <p>Crass sit amet</p>
+                <hr />
+                <a href="#">Lorem Ipsu Lorem Ipsum cvsem</a>
+                <a href="#">Lorem Ipsum</a>
+                <a href="#">Lorem Ipsumd Lorem Ipsum cvsesd</a>
+                <a href="#">Lorem Ipsum cvse </a>
+                <a href="#">Lorem Ipsum dsldkjs</a>
+                <a href="#">Lorem Ipsumdfgsd</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="#">Utilities</a></li>
+        </ul>
+        <div class="hamburger">&#x2630;</div>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Resources</h1>
+        <h2>Donations</h2>
+      </div>
+    </section>
+    <section class="steps">
+      <ul>
+        <li class="active" id="donate-view">
+          <span>1.</span> <span class="mobile-hide">Donate</span>
+        </li>
+        <li id="personal-view">
+          <span>2.</span> <span class="mobile-hide">Personal</span>
+        </li>
+        <li id="donation-info-view">
+          <span>3.</span>
+          <span class="mobile-hide">Dontation info</span>
+        </li>
+        <li id="payment-view">
+          <span>4.</span><span class="mobile-hide">Payment</span>
+        </li>
+        <li id="confirmation-viwe">
+          <span>5.</span><span class="mobile-hide">Confirmation</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="forms">
+      <!-- 1. Donate -->
+      <div class="donate-view active">
+        <div class="forms--about">
+          <h2>About you</h2>
+          <form>
+            <ul>
+              <li>
+                <label for="title">Title </label>
+                <select name="title" id="title">
+                  <option value="mr">Mr</option>
+                  <option value="mrs">Mrs</option>
+                </select>
+              </li>
+
+              <li class="errorMsg">
+                <label for="name">First name </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </li>
+              <li>
+                <label for="lastname"> Last name </label>
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </li>
+              <li class="validMsg">
+                <label for="email"> Email </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="forms--gift">
+          <h2>Your gift</h2>
+          <div class="donation-container">
+            <div class="text">
+              <p>Dontaion</p>
+            </div>
+            <div class="amount">
+              <div class="btn">
+                <button class="one-off">One-off Gift</button>
+                <button class="regular active">Regular giving</button>
+              </div>
+              <ul>
+                <li>
+                  <input type="radio" name="radio" id="5e" required />
+                  <label for="5e">5e a month</label>
+                </li>
+                <li>
+                  <input type="radio" name="radio" id="10e" required />
+                  <label for="10e">10e a month</label>
+                </li>
+                <li>
+                  <input type="radio" name="radio" id="20e" required />
+                  <label for="20e">20e a month</label>
+                </li>
+                <li>
+                  <input type="radio" name="radio" id="30e" required />
+                  <label for="30e">30e a month</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 2. Personal -->
+      <div class="personal-view">
+        <div class="personal-details">
+          <h2>Personal details</h2>
+          <form>
+            <ul>
+              <li>
+                <label for="title">Title </label>
+                <select name="title">
+                  <option value="mr">Mr</option>
+                  <option value="mrs">Mrs</option>
+                </select>
+              </li>
+
+              <li>
+                <label for="name">First name </label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </li>
+              <li>
+                <label for="lastname"> Last name </label>
+                <input
+                  type="text"
+                  name="lastname"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </li>
+              <li>
+                <label for="email"> Email </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </li>
+              <li>
+                <label for="mobile"> Mobile </label>
+                <input
+                  type="number"
+                  name="mobile"
+                  id="mobile"
+                  placeholder="Enter your mobile phone"
+                  required
+                />
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="billing-address">
+          <h2>Billing address</h2>
+          <form>
+            <ul>
+              <li class="small">
+                <label for="postcode"> Postcode </label>
+                <input
+                  type="number"
+                  name="postcode"
+                  id="postcode"
+                  placeholder="Postcode"
+                  required
+                />
+              </li>
+              <li class="small">
+                <label for="house-number">House number </label>
+                <input
+                  type="number"
+                  name="house-number"
+                  id="house-number"
+                  placeholder="house-number"
+                  required
+                />
+              </li>
+              <li>
+                <label for="street"> Street </label>
+                <input
+                  type="text"
+                  name="street"
+                  id="street"
+                  placeholder="Enter your street name"
+                  required
+                />
+              </li>
+              <li>
+                <label for="city"> City </label>
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder="Enter city name"
+                  required
+                />
+              </li>
+              <li>
+                <label for="county"> Country </label>
+                <input
+                  type="text"
+                  name="county"
+                  id="county"
+                  placeholder="Enter county name"
+                  required
+                />
+              </li>
+              <li class="check">
+                <input type="checkbox" name="check" id="check" />
+                <label for="check"
+                  >We would like to keep you updated about our work. To do so
+                  we’ll use the details you’ve provided, but we promise to never
+                  share them with other organisations. If you would rather not
+                  hear from us, just tick this box.</label
+                >
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <!-- 3. Donation infor -->
+      <div class="donation-info-view">
+        <div class="donation-information">
+          <h2>Donation information</h2>
+          <p>
+            If you are not the acount holder or require an additional signatory
+            on the account, please download and return the
+            <a href="#">monthly direct debit</a>
+            donation form.
+          </p>
+          <form>
+            <ul>
+              <li>
+                <label for="accHolder">Name of Account Holder </label>
+                <input
+                  type="text"
+                  name="accHolder"
+                  id="accHolder"
+                  placeholder="Mr J Blogges"
+                  required
+                />
+              </li>
+              <li>
+                <label for="accNumber"> Account number </label>
+                <input
+                  type="number"
+                  name="accNumber"
+                  id="accNumber"
+                  placeholder="123456789"
+                  required
+                />
+              </li>
+              <li>
+                <label for="sortCode"> Sort code </label>
+                <div class="cont">
+                  <input
+                    class="sortCode"
+                    type="number"
+                    name="sortCode"
+                    id="sortCode1"
+                    placeholder="12"
+                    required
+                  />
+                  <input
+                    class="sortCode"
+                    type="number"
+                    name="sortCode"
+                    id="sortCode2"
+                    placeholder="34"
+                    required
+                  />
+                  <input
+                    class="sortCode"
+                    type="number"
+                    name="sortCode"
+                    id="sortCode3"
+                    placeholder="56"
+                    required
+                  />
+                </div>
+              </li>
+              <li>
+                <label for="amount"> Your dontation </label>
+                <input
+                  type="number"
+                  name="amount"
+                  id="amount"
+                  placeholder="10$"
+                  required
+                />
+              </li>
+              <li class="payment">
+                <label for="date">Payment date</label>
+                <ul>
+                  <li>
+                    <input type="radio" name="date" id="date" />
+                    <label for="date">1st July</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="date" id="date2" />
+                    <label for="date">15th July</label>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <label for="frequency">Payment frequency </label>
+                <select name="frequency" id="frequency">
+                  <option value="monthly">Monthly</option>
+                  <option value="yearly">Yearly</option>
+                </select>
+              </li>
+              <li class="check">
+                <input
+                  type="checkbox"
+                  name="checkDonation"
+                  id="checkDonation"
+                />
+                <label for="checkDonation"
+                  >I confirm that I am the account holder and the only person
+                  required to authorise debits from this acount.</label
+                >
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="gift-aid">
+          <h2>Gift aid</h2>
+
+          <p class="info">
+            With Gift aid your donation could be worth €12.00 at no extra cost
+            to you. To add Gift aid to your donation, please tick the box below.
+          </p>
+          <p class="desc">
+            I confirm I have paid or will pay an amount of Income Tax and / or
+            Capital Gains Tax for each tax year (6 April to 5 April) that is at
+            least equal to the amount of tax that all the charities or Community
+            Amateur Sports Clubs (CASs) that I donate to will reclaim on my
+            gifts for that tax year. By ticking this box I confirm that I want
+            to treat all donations I have made for the last 4 years and any
+            future donations I may make, as Gift aid donations until further
+            notice.
+            <br />
+            I understand that other taxes such as VAT and Council Tax do not
+            qualify. I understand the charity will redeem 28p of tax on every €1
+            that I give or after 6 April 2019.
+          </p>
+          <div class="checkbox">
+            <input type="checkbox" name="statement" id="statement" />
+            <label for="statement"
+              >I have read and I understand the above statement</label
+            >
+          </div>
+        </div>
+      </div>
+      <!-- 4. Payment -->
+      <div class="payment-view">
+        <div class="payment-details">
+          <h2>Payment details</h2>
+          <form>
+            <ul class="left-col">
+              <li>
+                <label for="card">Card type </label>
+                <select name="card" id="card">
+                  <option value="visa">Visa debit</option>
+                  <option value="master">MasterCard</option>
+                </select>
+              </li>
+              <li>
+                <label for="cardNumber">Card number </label>
+                <input
+                  type="number"
+                  name="number"
+                  id="cardNumber"
+                  placeholder="1234567896789"
+                  required
+                />
+              </li>
+              <li>
+                <label for="firstname"> First name </label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="Joe"
+                  required
+                />
+              </li>
+              <li>
+                <label for="surname"> Surname </label>
+                <input
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  placeholder="Bloggs"
+                  required
+                />
+              </li>
+            </ul>
+            <ul class="right-col">
+              <li class="valid">
+                <label for="validDate">Valid from </label>
+                <input
+                  class="sortCode"
+                  type="number"
+                  name="validDate"
+                  id="validDate1"
+                  placeholder="06"
+                  required
+                />
+                /
+                <input
+                  class="sortCode"
+                  type="number"
+                  name="validDate"
+                  id="validDate2"
+                  placeholder="18"
+                  required
+                />
+              </li>
+              <li class="valid">
+                <label for="expiryDate">Expiry date </label>
+                <input
+                  class="sortCode"
+                  type="number"
+                  name="expiryDate"
+                  id="expiryDate1"
+                  placeholder="06"
+                  required
+                />
+                /
+                <input
+                  class="sortCode"
+                  type="number"
+                  name="expiryDate"
+                  id="expiryDate2"
+                  placeholder="22"
+                  required
+                />
+              </li>
+              <li class="short">
+                <label for="issueNum">Issue number </label>
+                <input
+                  type="number"
+                  name="issueNum"
+                  id="issueNum"
+                  placeholder="06"
+                  required
+                />
+              </li>
+              <li class="short issueNum">
+                <label for="secCode">Issue number </label>
+                <input
+                  type="number"
+                  name="secCode"
+                  id="secCode"
+                  placeholder="123"
+                  required
+                />
+                <div class="mark">
+                  ?
+                  <div class="img-container">
+                    <img src="./images/example.png" alt="" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <!-- 5. Confirmation -->
+      <div class="confirmation-viwe">
+        <div class="thanks">
+          <h2>Thank you!</h2>
+          <div class="wrap">
+            <img src="./images/thumb.png" alt="like icon" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              faucibus quis arcu ut laoreet. Suspendisse consectetur arcu neque,
+              ac tincidunt sapien vulputate sed. Duis efficitur, magna ac
+              pellentesque dignissim, diam felis posuere ligula, sed congue nisl
+              tellus a arcu. Sed vestibulum mattis libero id bibendum. Sed vitae
+              commodo justo, a semper arcu. Sed ullamcorper iaculis velit quis
+              aliquet. Ut convallis eros nec metus ultrices, non aliquam sem
+              aliquam.
+              <br />
+              Praesent id accumsan odio. Nam sit amet purus fringilla, bibendum
+              risus sed, tempus nulla. Curabitur iaculis dictum turpis. Aliquam
+              erat volutpat. Duis velit diam, euismod quis justo vel, accumsan
+              posuere metus. Nunc ac dapibus tortor, consectetur dapibus augue.
+              Mauris facilisis finibus venenatis. Morbi orci lectus, congue id
+              mauris a, imperdiet ultricies orci. Sed lobortis, urna nec posuere
+              tempus, eros elit accumsan metus, suscipit blandit lectus nisi a
+              libero. Sed lacinia fringilla justo, id cursus est elementum eget.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-wrap"><a class="next-step">NEXT STEP</a></div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div>
+          <p>P +649555 555</p>
+          <p>F +649555 555</p>
+          <p>E info@email.com</p>
+          <br />
+          <p><strong>Adress</strong></p>
+          <p>http://www.lipsum.com/feed/html</p>
+        </div>
+        <div class="column-hide-mobile">
+          <p><strong>Services</strong></p>
+          <ul>
+            <li><a href="">Commercial</a></li>
+            <li><a href="">Distributio</a></li>
+            <li><a href="">Gas</a></li>
+            <li><a href="">Generetion</a></li>
+            <li><a href="">Indrustrial</a></li>
+            <li><a href="">Telecomms</a></li>
+            <li><a href="">Transmission</a></li>
+            <li><a href="">Water</a></li>
+          </ul>
+        </div>
+        <div class="column-hide-mobile">
+          <p><strong>Markets</strong></p>
+          <ul>
+            <li><a href="">Commercial</a></li>
+            <li><a href="">Indrustrial</a></li>
+            <li><a href="">Infrastructure</a></li>
+            <li><a href="">Resources</a></li>
+            <li><a href="">Utilities</a></li>
+          </ul>
+        </div>
+        <div class="column-hide-mobile">
+          <p><strong>HSEQ</strong></p>
+          <ul>
+            <li><a href="">Health &</a></li>
+            <li><a href="">Safety</a></li>
+            <li><a href="">Enviroment</a></li>
+            <li><a href="">Quality</a></li>
+          </ul>
+        </div>
+        <div class="column-hide-mobile">
+          <p><strong>About</strong></p>
+          <ul>
+            <li><a href="">History</a></li>
+            <li><a href="">Structure</a></li>
+            <li><a href="">People</a></li>
+            <li><a href="">CSR</a></li>
+            <li><a href="">Locations</a></li>
+            <li><a href="">PPV</a></li>
+          </ul>
+        </div>
+        <div class="column-hide-mobile">
+          <p><strong>Careers</strong></p>
+          <ul>
+            <li><a href="">Who we are</a></li>
+            <li><a href="">Benefits</a></li>
+            <li><a href="">Programmes</a></li>
+            <li><a href="">Our People</a></li>
+            <li><a href="">Roles/</a></li>
+            <li><a href="">Vacancies</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.repeat%2CElement.prototype.closest%2CNumber.isNaN"></script>
+  </body>
+</html>
