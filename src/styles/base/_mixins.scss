@@ -1,0 +1,59 @@
+// @mixin
+@mixin container {
+  width: $--container-width;
+  margin: auto;
+  @media (max-width: $--container-width) {
+    width: 90%;
+  }
+}
+@mixin flex($-direction, $-justify, $-align) {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: $-direction;
+  justify-content: $-justify;
+  align-items: $-align;
+}
+@mixin bgImg($-height) {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: $-height;
+}
+
+@mixin btn($-bgC, $-bgH) {
+  padding: 10px 15px;
+  border: none;
+  background-color: $-bgC;
+  color: $--clr-white;
+  &:hover {
+    background: $-bgH;
+  }
+}
+@mixin val($--content) {
+  position: absolute;
+  content: $--content;
+  font-size: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  @media (max-width: $--mobile-width) {
+    top: 60%;
+  }
+}
+
+@mixin stepsSkewFix(
+  $--top: unset,
+  $--bottom: unset,
+  $--right: unset,
+  $--left: unset
+) {
+  content: "";
+  position: absolute;
+  top: $--top;
+  bottom: $--bottom;
+  right: $--right;
+  left: $--left;
+  height: 40px;
+  width: 40px;
+  background: $--clr-red;
+}

@@ -1,0 +1,81 @@
+.content {
+  @include container();
+  @include flex(row, center, center);
+  padding: 50px 0;
+  @media (max-width: $--mobile-width) {
+    @include flex(column, center, center);
+  }
+  &--qoute {
+    padding-right: 30px;
+    color: $--clr-orange;
+    flex: 0 0 30%;
+    max-width: 30%;
+    border-right: 1px solid lightgray;
+    @media (max-width: $--tablet-width) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    @media (max-width: $--mobile-width) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      border-right: 0;
+      padding-bottom: 30px;
+      border-bottom: 1px solid lightgray;
+      padding-right: 0;
+    }
+    span {
+      font-size: 40px;
+      &:first-of-type {
+        transform: rotate(45deg);
+      }
+      &:last-of-type {
+        margin-left: 45%;
+        @media (max-width: $--tablet-width) {
+          margin-left: 95%;
+        }
+      }
+    }
+    .buttons {
+      width: auto;
+      margin-top: 40px;
+      @media (max-width: $--tablet-width) {
+        text-align: left;
+        margin-top: 10px;
+      }
+      & > * {
+        background-color: rgba($--clr-orange, 0.5);
+        padding: 10px 15px;
+        &:hover {
+          background-color: $--clr-orange;
+        }
+      }
+    }
+  }
+  &--info {
+    flex: 0 0 55%;
+    max-width: 55%;
+    padding-left: 50px;
+    margin-top: -50px;
+    @media (max-width: $--tablet-width) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-top: 0;
+      padding-top: 30px;
+      padding-left: 0;
+    }
+    @media (max-width: $--tablet-width) and (min-width: $--mobile-width) {
+      padding-left: 30px;
+    }
+    @media (max-width: $--mobile-width) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    h3 {
+      color: $--clr-orange;
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 2;
+    }
+  }
+}

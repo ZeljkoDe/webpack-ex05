@@ -1,0 +1,21 @@
+.buttons {
+  color: $--clr-white;
+  @include container();
+  text-align: right;
+  margin-top: 300px;
+  @media (max-width: $--tablet-width) {
+    margin-top: 200px;
+  }
+  @media (max-width: $--mobile-width) {
+    margin-top: 150px;
+  }
+
+  & > * {
+    display: inline-block;
+    background-color: rgba($--clr-red, 0.5);
+    padding: 10px 15px;
+    &:hover {
+      background-color: $--clr-red;
+    }
+  }
+}
