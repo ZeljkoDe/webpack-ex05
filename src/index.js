@@ -1,9 +1,12 @@
+import Swiper from "swiper";
+import "swiper/dist/css/swiper.min.css";
+// import SwiperCore, { Navigation } from "swiper/core";
+// SwiperCore.use([Navigation]);
 import "./styles/main.scss";
 import bg1 from "./images/bg1.png";
 import bg2 from "./images/bg2.png";
 import bg3 from "./images/bg3.png";
 // console.log(bg1);
-
 const info = [
   {
     id: 0,
@@ -122,6 +125,8 @@ if (nextStep) {
 
 const swiper = new Swiper(".mySwiper", {
   loop: true,
+  nextButton: ".swiper-button-next",
+  prevButton: ".swiper-button-prev",
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -131,13 +136,9 @@ const swiper = new Swiper(".mySwiper", {
       slidesPerView: 2,
       spaceBetween: 0,
     },
-    1024: {
+    1924: {
       slidesPerView: 3,
       spaceBetween: 0,
     },
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   },
 });

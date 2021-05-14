@@ -28,11 +28,13 @@
     position: relative;
   }
   .text {
+    opacity: 0;
     position: absolute;
     left: 0;
     width: 100%;
     z-index: 1;
     color: $--clr-white;
+    transition: $--transition;
     p {
       display: none;
     }
@@ -42,6 +44,7 @@
       background-color: rgba(black, 0.8);
     }
     .text {
+      opacity: 1;
       p {
         margin-top: 20px;
         display: block;
@@ -52,11 +55,16 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  @supports (display: flex) {
-    span {
-      display: none;
-    }
+  background-image: none !important;
+
+  span {
+    visibility: visible;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 30px;
   }
+
   color: $--clr-orange;
   background-color: rgba($--clr-red, 0.5);
   color: $--clr-white;
@@ -71,9 +79,6 @@
   }
   &:hover {
     background-color: $--clr-red;
-  }
-  span {
-    font-size: 20px;
   }
 }
 .swiper-button-next,
