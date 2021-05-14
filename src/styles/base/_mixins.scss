@@ -1,6 +1,7 @@
 // @mixin
 @mixin container {
   width: $--container-width;
+  max-width: 90%;
   margin: auto;
   @media (max-width: $--container-width) {
     width: 90%;

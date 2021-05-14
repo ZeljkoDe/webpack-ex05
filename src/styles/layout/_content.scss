@@ -35,6 +35,14 @@
         }
       }
     }
+    .lead {
+      display: none;
+      opacity: 0;
+      &.active {
+        opacity: 1;
+        display: block;
+      }
+    }
     .buttons {
       width: auto;
       margin-top: 40px;

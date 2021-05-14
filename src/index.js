@@ -123,6 +123,41 @@ if (nextStep) {
   });
 }
 
+// lead text slider
+const lead = document.querySelectorAll(".lead");
+const rightBtnLead = document.querySelector(".right-btn-lead");
+const leftBtnLead = document.querySelector(".left-btn-lead");
+let clicked = 0;
+
+if (rightBtnLead) {
+  rightBtnLead.addEventListener("click", () => {
+    clicked++;
+    if (clicked > lead.length - 1) {
+      clicked = 0;
+    }
+    setLeadSlide();
+  });
+}
+if (leftBtnLead) {
+  leftBtnLead.addEventListener("click", () => {
+    clicked--;
+    if (clicked < 0) {
+      clicked = lead.length - 1;
+    }
+    setLeadSlide();
+  });
+}
+const setLeadSlide = () => {
+  lead.forEach((l, i) => {
+    if (i === clicked) {
+      l.classList.add("active");
+    } else {
+      l.classList.remove("active");
+    }
+  });
+};
+
+// swiper
 const swiper = new Swiper(".mySwiper", {
   loop: true,
   nextButton: ".swiper-button-next",
