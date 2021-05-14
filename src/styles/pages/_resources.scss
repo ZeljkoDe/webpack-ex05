@@ -163,16 +163,19 @@
               }
             }
             &.errorMsg {
+              @extend %icomoon;
               input {
                 border: 1px solid red;
               }
               &::after {
-                @include val("❌");
+                @include val("\ea0f");
+                color: red;
               }
             }
             &.validMsg {
+              @extend %icomoon;
               &::before {
-                @include val("✔");
+                @include val("\ea10");
                 color: green;
               }
             }

@@ -26,11 +26,11 @@ module.exports = {
         },
       },
       {
-        test: /\.png$/,
+        test: /\.(png|svg)$/,
         type: "asset",
       },
       {
-        test: /\.scss$/i,
+        test: /\.s?css$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -51,7 +51,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(ttf|otf)$/,
+        test: /\.(ttf|otf|eot|woff)$/,
         use: [
           {
             loader: "file-loader",
