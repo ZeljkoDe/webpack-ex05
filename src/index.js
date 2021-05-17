@@ -1,9 +1,12 @@
+import Swiper from "swiper";
+import "swiper/dist/css/swiper.min.css";
+// import SwiperCore, { Navigation } from "swiper/core";
+// SwiperCore.use([Navigation]);
 import "./styles/main.scss";
 import bg1 from "./images/bg1.png";
 import bg2 from "./images/bg2.png";
 import bg3 from "./images/bg3.png";
 // console.log(bg1);
-
 const info = [
   {
     id: 0,
@@ -120,8 +123,46 @@ if (nextStep) {
   });
 }
 
+// lead text slider
+const lead = document.querySelectorAll(".lead");
+const rightBtnLead = document.querySelector(".right-btn-lead");
+const leftBtnLead = document.querySelector(".left-btn-lead");
+let clicked = 0;
+
+if (rightBtnLead) {
+  rightBtnLead.addEventListener("click", () => {
+    clicked++;
+    if (clicked > lead.length - 1) {
+      clicked = 0;
+    }
+    setLeadSlide();
+  });
+}
+if (leftBtnLead) {
+  leftBtnLead.addEventListener("click", () => {
+    clicked--;
+    if (clicked < 0) {
+      clicked = lead.length - 1;
+    }
+    setLeadSlide();
+  });
+}
+const setLeadSlide = () => {
+  lead.forEach((l, i) => {
+    if (i === clicked) {
+      l.classList.add("active");
+    } else {
+      l.classList.remove("active");
+    }
+  });
+};
+
+// swiper
 const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
   loop: true,
+  nextButton: ".swiper-button-next",
+  prevButton: ".swiper-button-prev",
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -131,13 +172,5 @@ const swiper = new Swiper(".mySwiper", {
       slidesPerView: 2,
       spaceBetween: 0,
     },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 0,
-    },
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   },
 });

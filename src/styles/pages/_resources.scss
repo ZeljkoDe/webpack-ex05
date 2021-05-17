@@ -92,7 +92,7 @@
 .forms {
   background-color: lightgray;
   width: 100%;
-  .donate-view {
+  &--container {
     @include container();
     @include flex(row, space-between, flex-start);
     flex-wrap: wrap;
@@ -100,6 +100,8 @@
     @media (max-width: $--mobile-width) {
       @include flex(column, flex-start, stretch);
     }
+    // }
+    // .donate-view {
     h2 {
       color: $--clr-orange;
       border-bottom: 1px solid $--clr-orange;
@@ -109,77 +111,82 @@
         text-align: center;
       }
     }
-    .forms--about {
+    .forms--container--input,
+    .forms--container--text {
       flex: 0 0 48%;
       max-width: 48%;
       @media (max-width: $--mobile-width) {
         flex: 0 0 100%;
         max-width: 100%;
       }
+    }
+    .forms--container--input {
       form {
         max-width: 100%;
         @media (max-width: $--mobile-width) {
           flex: 0 0 100%;
           max-width: 100%;
         }
-        ul {
-          li {
-            padding: 20px 0;
-            position: relative;
-            @include flex(row, flex-start, center);
+        li {
+          padding: 20px 0;
+          position: relative;
+          @include flex(row, flex-start, center);
+          @media (max-width: $--mobile-width) {
+            @include flex(column, flex-start, center);
+            padding: 10px 0;
+          }
+          label {
+            flex: 0 0 30%;
+            max-width: 30%;
             @media (max-width: $--mobile-width) {
-              @include flex(column, flex-start, center);
-              padding: 10px 0;
+              flex: 0 0 100%;
+              max-width: 100%;
+              margin-bottom: 5px;
             }
-            label {
-              flex: 0 0 30%;
-              max-width: 30%;
-              @media (max-width: $--mobile-width) {
-                flex: 0 0 100%;
-                max-width: 100%;
-                margin-bottom: 5px;
-              }
+          }
+          input {
+            flex: 0 0 70%;
+            width: 70%;
+            border: none;
+            padding: 10px 5px;
+            @media (max-width: $--mobile-width) {
+              flex: 0 0 100%;
+              width: 100%;
             }
+          }
+          select {
+            padding: 10px 5px;
+            width: 90px;
+            border: none;
+          }
+          input:focus,
+          select:focus {
+            outline: 1px solid $--clr-orange;
+            &.error {
+              outline: unset;
+            }
+          }
+          &.errorMsg,
+          &.validMsg {
+            @extend %icomoon;
+          }
+          &.errorMsg {
             input {
-              flex: 0 0 70%;
-              width: 70%;
-              border: none;
-              padding: 10px 5px;
-              @media (max-width: $--mobile-width) {
-                flex: 0 0 100%;
-                width: 100%;
-              }
+              border: 1px solid red;
             }
-            select {
-              padding: 10px 5px;
-              width: 90px;
-              border: none;
+            &::after {
+              @include val("\ea0f", red);
             }
-            input:focus,
-            select:focus {
-              outline: 1px solid $--clr-orange;
-              &.error {
-                outline: unset;
-              }
-            }
-            &.errorMsg {
-              input {
-                border: 1px solid red;
-              }
-              &::after {
-                @include val("❌");
-              }
-            }
-            &.validMsg {
-              &::before {
-                @include val("✔");
-                color: green;
-              }
+          }
+          &.validMsg {
+            &::before {
+              @include val("\ea10", green);
             }
           }
         }
       }
     }
+
     .forms--gift {
       flex: 0 0 48%;
       max-width: 48%;
@@ -251,12 +258,7 @@
     }
   }
   .personal-view {
-    @extend .donate-view;
-    .personal-details {
-      @extend .forms--about;
-    }
     .billing-address {
-      @extend .forms--about;
       .check {
         @include flex(row, flex-start, flex-start);
         input {
@@ -277,10 +279,9 @@
       display: flex;
     }
   }
+  // }
   .donation-info-view {
-    @extend .donate-view;
     .donation-information {
-      @extend .forms--about;
       @media (max-width: $--mobile-width) {
         .cont {
           @include flex(row, center, center);
@@ -315,7 +316,6 @@
       }
     }
     .gift-aid {
-      @extend .forms--about;
       p {
         padding: 20px;
         &.info {
@@ -341,12 +341,10 @@
     }
   }
   .payment-view {
-    @extend .donate-view;
     h2 {
       text-align: left;
     }
     .payment-details {
-      @extend .forms--about;
       flex: 0 0 100%;
       max-width: 100%;
       @media (max-width: $--mobile-width) {
@@ -389,7 +387,6 @@
               max-width: 100%;
             }
           }
-
           .issueNum {
             position: relative;
             .mark {
@@ -451,7 +448,6 @@
     }
   }
   .confirmation-viwe {
-    @extend .donate-view;
     .thanks {
       width: 100%;
       h2 {

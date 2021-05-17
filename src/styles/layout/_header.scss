@@ -6,6 +6,7 @@ header {
   background-repeat: no-repeat;
   height: 100vh;
   position: relative;
+  transition: all $--transition;
   .slider {
     padding-top: 140px;
     @include container();

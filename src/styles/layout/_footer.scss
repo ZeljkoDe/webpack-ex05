@@ -3,6 +3,7 @@ footer {
   .wrap {
     @include container();
     @include flex(row, space-between, flex-start);
+    flex-wrap: wrap;
     padding-bottom: 50px;
     line-height: 2;
     font-size: 12px;
