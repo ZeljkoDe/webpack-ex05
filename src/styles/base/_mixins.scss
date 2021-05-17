@@ -30,11 +30,12 @@
     background: $-bgH;
   }
 }
-@mixin val($--content) {
+@mixin val($--content, $--clr) {
   position: absolute;
   content: $--content;
   font-size: 15px;
   top: 50%;
+  color: $--clr;
   transform: translateY(-50%);
   right: 10px;
   @media (max-width: $--mobile-width) {
