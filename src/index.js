@@ -159,6 +159,7 @@ const setLeadSlide = () => {
 
 // swiper
 const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
   loop: true,
   nextButton: ".swiper-button-next",
   prevButton: ".swiper-button-prev",
@@ -169,10 +170,6 @@ const swiper = new Swiper(".mySwiper", {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 0,
-    },
-    1924: {
-      slidesPerView: 3,
       spaceBetween: 0,
     },
   },
